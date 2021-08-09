@@ -4,6 +4,10 @@
   "description": "## style command  npx stylelint \"**/*.{css,scss}\"",
   "main": "index.js",
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.0",
     "hint": "6.0.x",
     "stylelint": "13.3.x",
     "stylelint-config-standard": "20.0.x",
