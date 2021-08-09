@@ -1,7 +1,7 @@
 let books = [];
 const displayBooks = document.getElementById("displayBooks");
-let bookContainer = document.createElement("div");
 let addButton = document.getElementById("add");
+
 
 function addBook () {
   let title = document.getElementById("title");
@@ -16,21 +16,28 @@ addButton.onclick = addBook;
 
 
 
-function removeBook (rmBook) {
-  books = books.filter(book => book !== rmBook );
+function removeBook (e) {
+  let bookTitle = e.target.parentElement.childNodes[0].textContent;
+  let bookAuthor = e.target.parentElement.childNodes[1].textContent;
+  books = books.filter(book => book.title !== bookTitle || book.author !== bookAuthor);
+  display();
 }
 
 function display () {
-  bookContainer.innerHTML = "";
-  console.log(bookContainer.innerHTML);
+  displayBooks.innerHTML = " ";
   books.forEach(book => {
+    let bookContainer = document.createElement("div");
     let bookTitle = document.createElement("p");
     let bookAuthor = document.createElement("p");
+    let remove = document.createElement("button");
+    remove.textContent = "Remove";
+    remove.onclick = removeBook;
     bookTitle.innerText = book.title;
     bookAuthor.innerText = book.author;
     displayBooks.appendChild(bookContainer);
     bookContainer.appendChild(bookTitle);
     bookContainer.appendChild(bookAuthor);
+    bookContainer.appendChild(remove);
   });
   
 }
