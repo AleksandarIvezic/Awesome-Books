@@ -48,11 +48,12 @@ To run it online just click on [Live Demo Link](https://shinobiwarior.github.io/
 - LinkedIn: [Aleksandar Ivezic](https://www.linkedin.com/in/aleksandar-ivezic/)
 
 
-👤 **Author2**
+👤 **Emmanuelle Kamwa**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
+-   Github: [@emmanuellekamwa](https://github.com/emmanuellekamwa)
+-   Twitter: [@AlixKamwa](https://twitter.com/AlixKamwa)
+-   Linkedin: [emmanuelle-kamwa-86145a1a4](https://www.linkedin.com/in/emmanuelle-kamwa-86145a1a4/)
+
 
 ## 🤝 Contributing
 
