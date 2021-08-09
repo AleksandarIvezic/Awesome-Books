@@ -1,5 +1,6 @@
 let books = [];
 const displayBooks = document.getElementById("displayBooks");
+let bookContainer = document.createElement("div");
 let addButton = document.getElementById("add");
 
 function addBook () {
@@ -20,11 +21,11 @@ function removeBook (rmBook) {
 }
 
 function display () {
+  bookContainer.innerHTML = "";
+  console.log(bookContainer.innerHTML);
   books.forEach(book => {
-    let bookContainer = document.createElement("div");
     let bookTitle = document.createElement("p");
     let bookAuthor = document.createElement("p");
-    bookContainer.textContent = "";
     bookTitle.innerText = book.title;
     bookAuthor.innerText = book.author;
     displayBooks.appendChild(bookContainer);
@@ -33,6 +34,7 @@ function display () {
   });
   
 }
+
 
 function formBook (title, author){
   this.title = title;
