@@ -14,6 +14,7 @@ function removeBook (e) {
   let bookTitle = e.target.parentElement.childNodes[0].textContent;
   let bookAuthor = e.target.parentElement.childNodes[1].textContent;
   books = books.filter(book => book.title !== bookTitle || book.author !== bookAuthor);
+  saveBooks();
   display();
 }
 function display () {
