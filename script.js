@@ -1,4 +1,4 @@
-//eslint-disable-next-line no-array-constructor
+// eslint-disable-next-line no-array-constructor
 let books = new Array();
 const displayBooks = document.getElementById('displayBooks');
 const addButton = document.getElementById('add');
@@ -7,10 +7,10 @@ class Book {
     this.title = title;
     this.author = author;
   }
-  add() {
+  add () {
     books.push(this);
   }
-  remove() {
+  remove () {
     books = books.filter((book) => book.title !== this.title || book.author !== this.author);
   }
 }
