@@ -1,9 +1,12 @@
-let books = [];
+// eslint-disable-next-line no-array-constructor
+let books = new Array();
 const displayBooks = document.getElementById('displayBooks');
 const addButton = document.getElementById('add');
-function FormBook(title, author) {
-  this.title = title;
-  this.author = author;
+class Book {
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
+  }
 }
 function saveBooks() {
   const myBooks = JSON.stringify(books);
@@ -35,7 +38,7 @@ function display() {
 function addBook() {
   const title = document.getElementById('title');
   const author = document.getElementById('author');
-  const book = new FormBook(title.value, author.value);
+  const book = new Book(title.value, author.value);
   books.push(book);
   saveBooks();
   display();
