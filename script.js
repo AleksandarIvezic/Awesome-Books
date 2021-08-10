@@ -7,10 +7,12 @@ class Book {
     this.title = title;
     this.author = author;
   }
-  add () {
+
+  add() {
     books.push(this);
   }
-  remove () {
+
+  remove() {
     books = books.filter((book) => book.title !== this.title || book.author !== this.author);
   }
 }
