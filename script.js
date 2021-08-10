@@ -1,4 +1,4 @@
-// eslint-disable-next-line no-array-constructor
+//eslint-disable-next-line no-array-constructor
 let books = new Array();
 const displayBooks = document.getElementById('displayBooks');
 const addButton = document.getElementById('add');
@@ -6,6 +6,12 @@ class Book {
   constructor(title, author) {
     this.title = title;
     this.author = author;
+  }
+  add() {
+    books.push(this);
+  }
+  remove() {
+    books = books.filter((book) => book.title !== this.title || book.author !== this.author);
   }
 }
 function saveBooks() {
@@ -20,10 +26,8 @@ function display() {
     const bookAuthor = document.createElement('p');
     const remove = document.createElement('button');
     remove.textContent = 'Remove';
-    remove.onclick = (e) => {
-      const bookTitle = e.target.parentElement.childNodes[0].textContent;
-      const bookAuthor = e.target.parentElement.childNodes[1].textContent;
-      books = books.filter((book) => book.title !== bookTitle || book.author !== bookAuthor);
+    remove.onclick = () => {
+      book.remove();
       saveBooks();
       display();
     };
@@ -39,7 +43,7 @@ function addBook() {
   const title = document.getElementById('title');
   const author = document.getElementById('author');
   const book = new Book(title.value, author.value);
-  books.push(book);
+  book.add();
   saveBooks();
   display();
 }
