@@ -48,6 +48,8 @@ function addBook() {
   book.add();
   saveBooks();
   display();
+  title.value = '';
+  author.value = '';
 }
 addButton.onclick = addBook;
 function checkStorage() {
@@ -57,4 +59,3 @@ function checkStorage() {
   }
 }
 window.onload = checkStorage;
-display();
