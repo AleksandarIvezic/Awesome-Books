@@ -77,4 +77,6 @@ hr.small-line {
   padding: 1px 8px ;
   background-color: green;
   color: white;
+  border: green 1px solid;
+  border-radius: 5px;
 }
