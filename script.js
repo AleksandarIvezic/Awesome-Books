@@ -54,7 +54,11 @@ function addBook() {
 addButton.onclick = addBook;
 function checkStorage() {
   if (localStorage.getItem('books')) {
-    books = JSON.parse(localStorage.getItem('books'));
+    const booksData = JSON.parse(localStorage.getItem('books'));
+    booksData.forEach((book) => {
+      const newBook = new Book(book.title, book.author);
+      newBook.add();
+    });
     display();
   }
 }
