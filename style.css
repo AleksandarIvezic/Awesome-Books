@@ -5,6 +5,7 @@
 */
 body {
   margin: 0 ;
+  background-color: tomato;
 }
 
 :root {
@@ -47,4 +48,33 @@ td {
 
 .main-container{
   text-align: center;
+}
+
+hr.small-line {
+  width: 100px;
+  margin: 10px auto;
+  border-top: 2px solid black;
+  opacity: 1;
+}
+
+.bookForm {
+  position: relative;
+  padding-bottom: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#title, #author {
+  width: 100%;
+  margin: 3px 0px 3px 0px;
+  padding: 1px 8px;
+}
+
+#add {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  padding: 1px 8px ;
+  background-color: green;
+  color: white;
 }
