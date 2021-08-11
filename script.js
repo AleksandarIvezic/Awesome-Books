@@ -23,9 +23,14 @@ function saveBooks() {
 function display() {
   displayBooks.innerHTML = ' ';
   books.forEach((book) => {
-    const bookContainer = document.createElement('div');
-    const bookTitle = document.createElement('p');
-    const bookAuthor = document.createElement('p');
+    const bookContainer = document.createElement('tr');
+    bookContainer.style.background = 'grey';
+    bookContainer.style.color = 'white';
+    bookContainer.style.borderBottom = '1px white solid';
+    const bookData = document.createElement('td');
+    const buttonData = document.createElement('td');
+    bookData.style.display = 'flex';
+    bookData.style.justifyContent = 'space-between';
     const remove = document.createElement('button');
     remove.textContent = 'Remove';
     remove.onclick = () => {
@@ -33,12 +38,11 @@ function display() {
       saveBooks();
       display();
     };
-    bookTitle.innerText = book.title;
-    bookAuthor.innerText = book.author;
+    bookData.innerText = `'${book.title}' by ${book.author}`;
     displayBooks.appendChild(bookContainer);
-    bookContainer.appendChild(bookTitle);
-    bookContainer.appendChild(bookAuthor);
-    bookContainer.appendChild(remove);
+    bookContainer.appendChild(bookData);
+    bookContainer.appendChild(buttonData);
+    buttonData.appendChild(remove);
   });
 }
 function addBook() {
