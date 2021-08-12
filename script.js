@@ -4,7 +4,7 @@ const displayBooks = document.getElementById('displayBooks');
 const addButton = document.getElementById('add');
 const date = document.getElementById('date');
 // eslint-disable-next-line no-undef
-date.innerText = luxon.DateTime.now().toFormat('MMMM dd, yyyy, hh.mma').toString();
+date.innerText = luxon.DateTime.now().toFormat('MMMM dd, yyyy, hh:mm:ss a').toString();
 class Book {
   constructor(title, author) {
     this.title = title;

@@ -113,7 +113,18 @@ hr.small-line {
 
 .date {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   margin: 10px;
+}
+
+.footer {
+  border: 2px solid black;
+  margin:  5px;
+  padding: 5px;
+}
+
+.copyright {
+  margin-bottom: 0;
+  text-align: center;
 }
 
