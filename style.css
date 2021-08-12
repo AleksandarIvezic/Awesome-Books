@@ -3,9 +3,15 @@
                 ****** RESET ******
     ==============================================
 */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 body {
   margin: 0;
   background-color: tomato;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 
 :root {
@@ -36,11 +42,60 @@ td {
   padding: 5px;
 }
 
+.margin-0 {
+  margin: 0;
+}
+
+.margin-bottom-3 {
+  margin-bottom: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  color: #fff;
+}
+
 /*
     ==============================================
                 ****** GLOBAL ******
     ==============================================
 */
+nav {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid black;
+  margin: 5px;
+  padding: 5px;
+}
+
+nav ul {
+  display: flex;
+  margin-bottom: 0;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0 5px;
+}
+
+nav,
+footer {
+  background-color: #e5a9a9;
+}
+
+.head-line {
+  font-family: 'Lobster', cursive;
+  font-size: 1.2rem;
+  margin-left: 20px;
+}
+
+.line {
+  border-right: 1px solid black;
+}
 
 #displayBooks {
   min-width: 500px;
@@ -63,7 +118,7 @@ hr.small-line {
   position: relative;
   padding-bottom: 20px;
   max-width: 400px;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 
 #title,
@@ -82,4 +137,34 @@ hr.small-line {
   color: white;
   border: green 1px solid;
   border-radius: 5px;
+}
+
+.date {
+  position: absolute;
+  top: 2.5rem;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px;
+}
+
+.footer {
+  border: 2px solid black;
+  margin: 5px;
+  padding: 5px;
+}
+
+.copyright {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+#contact {
+  width: 450px;
+  margin: 30px auto;
+}
+
+#contact ul,
+#contact .text {
+  text-align: start;
 }

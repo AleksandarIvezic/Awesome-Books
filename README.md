@@ -4,7 +4,7 @@
 
 > In this project, we build a basic website that allows users to add/remove books from a list. We achieve that by using JavaScript objects and arrays.
 
-![screenshot](./screenshot-app.png)
+![screenshot](./app_screenshot.png)
 
 
 ## Built With
