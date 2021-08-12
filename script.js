@@ -5,6 +5,39 @@ const addButton = document.getElementById('add');
 const date = document.getElementById('date');
 // eslint-disable-next-line no-undef
 date.innerText = luxon.DateTime.now().toFormat('MMMM dd, yyyy, hh:mm:ss a').toString();
+const listLink = document.getElementById('list_link');
+const addLink = document.getElementById('add_link');
+const contactLink = document.getElementById('contact_link');
+const list = document.getElementById('list');
+const form = document.getElementById('form');
+const contact = document.getElementById('contact');
+form.style.display = 'none';
+contact.style.display = 'none';
+listLink.style.color = '#fff';
+listLink.onclick = () => {
+  listLink.style.color = '#fff';
+  addLink.style.color = '#000';
+  contactLink.style.color = '#000';
+  list.style.display = 'block';
+  form.style.display = 'none';
+  contact.style.display = 'none';
+};
+addLink.onclick = () => {
+  addLink.style.color = '#fff';
+  listLink.style.color = '#000';
+  contactLink.style.color = '#000';
+  list.style.display = 'none';
+  form.style.display = 'block';
+  contact.style.display = 'none';
+};
+contactLink.onclick = () => {
+  contactLink.style.color = '#fff';
+  addLink.style.color = '#000';
+  listLink.style.color = '#000';
+  list.style.display = 'none';
+  form.style.display = 'none';
+  contact.style.display = 'block';
+};
 class Book {
   constructor(title, author) {
     this.title = title;

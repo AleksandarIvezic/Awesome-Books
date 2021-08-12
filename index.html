@@ -15,41 +15,44 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+  <title>Awesome books</title>
 </head>
 
 <body>
   <nav>
     <div class="heading">
-      <a href="#">Awesome Books</a>
+      <p class="margin-0 head-line">Awesome Books</p>
     </div>
     <ul>
-      <li><a href="#">List</a></li>
+      <li><a id="list_link" href="#">List</a></li>
       <li class="line"></li>
-      <li><a href="#">Add new</a></li>
+      <li><a id="add_link" href="#">Add new</a></li>
       <li class="line"></li>
-      <li><a href="#">Contact</a></li>
+      <li><a id="contact_link" href="#">Contact</a></li>
     </ul>
   </nav>
   <div class="date"><p id="date"></p></div>
-  <main class="main-container">
-    <div class="books">
-      <h1>All awesome books</h1>
+  <main id="main" class="main-container">
+    <div id="list">
+      <h1 class="margin-bottom-3">All awesome books</h1>
       <table id="displayBooks" class="mb-4">
       </table>
       <hr class="small-line">
     </div>
-    <div class="form">
-      <h2>Add a new book </h2>
+    <div id="form">
+      <h2 class="margin-bottom-3">Add a new book </h2>
       <form class="bookForm">
         <input type = "text" placeholder = "Title" id="title"><br><br>
         <input type = "text" placeholder = "Author" id="author"><br><br>
         <input type = "button" id="add" value="Add">
       </form>
     </div>
-    <div class="contact">
-      <h1>Contact Information</h1>
-      <p>Do you have any questions or you just want to say "Hello"? You can reach out to us!</p>
+    <div id="contact">
+      <h2 class="margin-bottom-3">Contact Information</h2>
+      <div class="text">
+        <p class="margin-0">Do you have any questions or you just want to say "Hello"?</p> 
+      <p> You can reach out to us!</p>
+      </div>      
       <ul>
         <li>Our email: email@gmail.com</li>
         <li>Our phone number: 0123456789</li>
